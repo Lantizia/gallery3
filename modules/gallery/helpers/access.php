@@ -695,7 +695,7 @@ class access_Core {
         $fp = fopen("$dir/.htaccess", "w+");
         fwrite($fp, "<IfModule mod_rewrite.c>\n");
         fwrite($fp, "  RewriteEngine On\n");
-        fwrite($fp, "  RewriteRule (.*) $base_url/\$1 [L]\n");
+        fwrite($fp, "  RewriteRule (.*) $base_url/\$1 [B,L]\n");
         fwrite($fp, "</IfModule>\n");
         fwrite($fp, "<IfModule !mod_rewrite.c>\n");
         fwrite($fp, "  Order Deny,Allow\n");
